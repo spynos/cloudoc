@@ -1,0 +1,38 @@
+.ServiceIntro {
+    position: relative;
+    height: 100vh;
+    background-color: rgba(black, 0.4);
+    padding: 8rem 5rem;
+    .container {
+        position: relative;
+        background-color: rgba(black, 0.3);
+        border-radius: 8px;
+        .jumbotron {
+            padding: 10rem 10rem;
+            background-color: transparent !important;
+            color: white;
+            margin-bottom: 0;
+            z-index: 9990;
+        }
+    }
+    .top {
+        margin-bottom: 2rem;
+        h1 {
+            margin-bottom: 1rem;
+        }
+    }
+    .bottom {
+        .button {
+            display: flex;
+            justify-content: center;
+            a {
+                transition: all 0.2s;
+                padding: 0.7rem 1.5rem;
+                &:hover {
+                    transform: translateY(-1px);
+                    box-shadow: 0 4px 8px -2px $oc-gray-5;
+                }
+            }
+        }
+    }
+}

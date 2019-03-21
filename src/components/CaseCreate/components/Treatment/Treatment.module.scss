@@ -1,0 +1,190 @@
+.Treatment {
+    .treatment-container {
+        display: flex;
+
+        .left,
+        .right {
+            flex: 1;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .left {
+            margin-bottom: 0.5rem;
+            display: flex;
+            flex-direction: column;
+
+            .prescription-name {
+                display: flex;
+                margin-bottom: 0.75rem;
+
+                .input-container {
+                    input {
+                        @extend %input;
+                        padding: 0.3rem;
+                        border-radius: 4px;
+                        &.input-age {
+                            width: 2rem;
+                            text-align: right;
+                            &::placeholder {
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+                .label {
+                    width: 6rem;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    padding: 0.3rem 0;
+                }
+            }
+
+            .prescription-configuration {
+                display: flex;
+                & > .label {
+                    width: 6rem;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    padding: 0.3rem 0;
+                }
+                .input-container {
+                    padding-top: 1rem;
+                    display: flex;
+                    .form-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        
+                        &:not(:last-child) {
+                            margin-right: 1.2rem;
+                        }
+                        &.delete-row-button {
+                            padding: 0.3rem 0;
+                            color: $delete;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                        &.medicinal-name {
+                            input {
+                                max-width: 8rem;
+                            }
+                        }
+                        &.dose {
+                            input {
+                                max-width: 3rem;
+                            }
+                        }
+                        .label {
+                            margin-bottom: 0.3rem;
+                        }
+            
+                        .content {
+                            height: 2rem;
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 0.3rem;
+                            .icon {
+                                margin-left: 0.3rem;
+                                font-size: 1rem;
+                            }
+                            input {
+                                @extend %input;
+                                border-radius: 4px;
+                                padding: 0.3rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right {
+            .medication-method,
+            .caution,
+            .improvement-method {
+                display: flex;
+                margin-bottom: 1rem;
+                .label {
+                    width: 6rem;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    padding: 0.3rem 0;
+                }
+                .input-container {
+                    width: 90%;
+                    input {
+                        width: 87%;
+                        @extend %input;
+                        border-radius: 4px;
+                        padding: 0.3rem;
+                        &.input-age {
+                            width: 2rem;
+                            text-align: right;
+                            &::placeholder {
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                    textarea {
+                        min-width: 16rem;
+                        width: 90%;
+                        border-radius: 4px;
+                        resize: none;
+                        border: 0;
+                        background-color: $gray-1;
+                        font-size: 0.9rem;
+                        padding: 0.5rem 0.5rem;
+                        &:focus {
+                            outline: 0;
+                        }
+                        &::placeholder {
+                            color: $oc-gray-5;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+    
+    .add-delete-save-button {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        padding: 0 1rem;
+
+        .left {
+            .addup-button {
+                background-color: $brand-primary;
+                .icon {
+                    margin-left: 0.3rem;
+                }
+                &:hover {
+                    background-color: lighten($brand-primary, 10%);
+                }
+            }
+        }
+
+        button {
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            font-size: 0.9rem;
+            &:first-child {
+                margin-right: 0.5rem;
+            }
+            &:last-child {
+                background-color: $brand-tertiary;
+                &:hover {
+                    background-color: darken($brand-tertiary, 10%);
+                }
+                &:active {
+                    background-color: darken($brand-tertiary, 15%);
+                }
+            }
+        }
+    }
+}

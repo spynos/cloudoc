@@ -1,0 +1,149 @@
+.CaseSubSidebar {
+    
+
+    a {
+        all: unset;
+        cursor: pointer;
+        user-select: none;
+    }
+    width: 100%;
+    height: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    .container {
+        .top {
+            margin-bottom: 2rem;
+            .title {
+                padding-left: 0.5rem;
+                padding-bottom: 0.2rem;
+                color: $brand-primary;
+                font-size: 1.1rem;
+                font-weight: 700;
+            }
+            .list-wrapper {
+                background-color: white;
+                padding: 0.75rem 1rem;
+                border-radius: 2px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .menu-list {
+                    margin-bottom: 0;
+                    .menu-list-item {
+                        &:not(:last-child) {
+                            margin-bottom: 0.4rem;
+                        }
+                        &:hover {
+                            color: $brand-tertiary;
+
+                        }
+                        &.active {
+                            color: $brand-tertiary;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+        .bottom {
+            .title {
+                padding-left: 0.5rem;
+                padding-bottom: 0.2rem;
+                color: $brand-primary;
+                font-size: 1.1rem;
+                font-weight: 700;
+            }    
+            .search-bar-wrapper {
+                margin-bottom: 0.3rem;
+                input {
+                    width: 100%;
+                    padding: 0.3rem 0.5rem;
+                    border-radius: 2px;
+                    border: none;
+                    &:focus {
+                        outline: 0;
+                    }
+                    &::placeholder {
+                        font-size: 0.9rem;
+                        color: $gray-2;
+                    }
+                }
+            }   
+            .results-container {
+                .buttons-wrapper {
+                    width: 100%;
+                    button {
+                        padding: 3px 6px;
+                        font-size: 0.8rem;
+                        font-weight: 300;
+                        background-color: $brand-secondary;
+                        transition: all 0.2s;
+                        &.active {
+                            background-color: $brand-primary;
+                            &:hover {
+                                background-color: $brand-primary;
+                            }
+                        }
+                        &:hover {
+                            background-color: lighten($brand-secondary, 10%);
+                        }
+                        &:first-child {
+                            border-top-left-radius: 2px;
+                            border-bottom-left-radius: 0;
+                        }
+                        &:last-child {
+                            border-top-right-radius: 2px;
+                            border-bottom-right-radius: 0;
+                        }
+                    }
+                }
+                .results-wrapper {
+                    position: relative;
+                    height: 29rem;
+                    background-color: white;
+                    padding: 1rem 0.5rem;
+                    overflow-y: scroll;
+                    
+                    .result {
+                        background-color: $gray-1;
+                        padding: 0.5rem 1rem;
+                        border-radius: 8px;
+                        transition: all 0.3;
+                        &:not(:last-child) {
+                            margin-bottom: 1rem;
+                        }
+                        &:hover {
+                            background-color: $gray-2;
+                            color: white;
+                            cursor: pointer;
+                        }
+                        .header {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 1rem;
+                            .name {
+                                font-weight: 700;
+                                margin-right: 1rem;
+                            }
+                            .category {
+                                color: white;
+                                background-color: $brand-quaternary;
+                                border-radius: 8px;
+                                padding: 2px 8px;
+                                font-size: 0.8rem;
+                                font-weight: 300;
+                            }
+                        }
+                        .description {
+                            font-size: 0.9rem;
+                            font-weight: 300;
+                            word-break: break-all;
+                            word-wrap: break-word;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

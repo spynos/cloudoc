@@ -1,0 +1,17 @@
+.Header {
+    & .line {
+        background-color: red;
+    }
+    .navbarContainer {
+        display: flex;
+        justify-content: space-between;
+        a {
+            color: white;
+        }
+        .buttonsWrapper {
+            .buttonSignIn, .buttonSignUp {
+                color: white;
+            }
+        }
+    }
+}

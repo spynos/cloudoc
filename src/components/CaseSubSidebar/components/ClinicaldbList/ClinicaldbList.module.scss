@@ -1,0 +1,42 @@
+.ClinicaldbList {
+    min-height: 200px;
+    margin-top: 0.5rem;
+    &.loading-container {
+        padding-top: 10rem;
+        text-align: center;
+    }
+    .anchor {
+        color: inherit;
+        &:hover {
+            text-decoration: none;
+            .article {
+                opacity: 0.8;
+            }
+        }
+    }
+    .article {
+        max-width: 20rem;
+        margin-bottom: 0.3rem;
+        .article-header {
+            background-color: $gray-1;
+            .pill {
+                font-size: 0.9rem;
+                font-weight: 300;
+                color: white;
+                border-radius: 3px;
+                padding: 0.5rem 0.8rem;
+                &.section {
+                    background-color: $brand-tertiary;
+                }
+                &:not(:last-child) {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+        .article-body {
+            .title {
+                margin-bottom: 0.8rem;
+            }
+        }
+    }
+}

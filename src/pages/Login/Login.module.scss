@@ -1,0 +1,76 @@
+.Login {
+    .login-container {
+        .row {
+            justify-content: center;
+            padding-top: 6rem;
+            .google-auth {
+                width: 100%;
+                background-color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+                span {
+                    color: $oc-gray-8;
+                    margin-left: 0.5rem;
+                }
+            }
+            .divider {
+                position: relative;
+                width: 100%;
+                height: 1px;
+                background-color: $oc-gray-4;
+                margin-top: 1.7rem;
+                margin-bottom: 1.7rem;
+                .or {
+                    position: absolute;
+                    left: 50%;
+                    top: -50%;
+                    transform: translate(-50%, -50%);
+                    width: 30px;
+                    height: 20px;
+                    line-height: 20px;
+                    text-align: center;
+                    background-color: $oc-gray-1;
+                    display: inline-block;
+                    color: $oc-gray-6;
+                    
+                }
+            }
+
+            h5 {
+                margin-bottom: 3rem;
+                text-align: center;
+            }
+            .link-for-password {
+                margin-top: 0.5rem;
+                font-size: 0.8em;
+                padding: 0 0.2rem;
+            }
+
+            .form-container {
+                .login-button {
+                    width: 100%;
+                }
+                .input-form {
+                    border: 0;
+                    
+                    &:focus {
+                        box-shadow: none;
+                        border: 0;
+                    }
+
+                    &::placeholder {
+                        color: $oc-gray-5;
+                        font-size: 0.9em;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.LayoutClouDoc {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    .main-sidebar {
+        width: 5rem;
+        height: 100vh;
+    }
+    .sub-sidebar {
+        width: 22rem;
+        background-color: $sub-background;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .main-container {
+        flex: 1;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto
+    }
+}

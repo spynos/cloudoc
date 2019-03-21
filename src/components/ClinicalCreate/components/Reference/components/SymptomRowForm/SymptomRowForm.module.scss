@@ -1,0 +1,110 @@
+.SymptomRowForm {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+.container-label {
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.input-form-container {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    overflow-x: auto;
+
+    th {
+        padding-bottom: 0.5rem;
+        &:not(:last-child) {
+            padding-right: 1rem;
+        }
+    }
+    td {
+        padding-bottom: 0.5rem;
+        padding-right: 0.3rem;
+        &:not(:last-child) {
+            padding-right: 1.8rem;
+        }
+        &:first-child {
+            padding-right: 0.5rem;
+        }
+        &.readOnly {
+            padding-right: 4rem;
+            &:first-child {
+                padding-right: 0;
+            }
+        }
+
+        .content {
+            // margin-bottom: 0.3rem;
+    
+            &.delete-row-button {
+                padding: 0.5rem 1rem;
+                color: $delete;
+                &:hover {
+                    cursor: pointer;
+                    background-color: $gray-1;
+                    border-radius: 4px;
+                }
+            }
+    
+            .icon {
+                padding: 0;
+                margin: 0;
+                font-size: 1rem;
+            }
+    
+            input {
+                width: 100%;
+                @extend %input;
+                border-radius: 4px;
+                padding: 0.3rem;
+            }
+        }
+    }
+    .label {
+        margin-bottom: 0.3rem;
+    }
+
+    .content {
+        // margin-bottom: 0.3rem;
+
+        &.delete-row-button {
+            padding: 0.5rem 1rem;
+            color: $delete;
+            &:hover {
+                cursor: pointer;
+                background-color: $gray-1;
+                border-radius: 4px;
+            }
+        }
+
+        .icon {
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        input {
+            width: 100%;
+            @extend %input;
+            border-radius: 4px;
+            padding: 0.3rem;
+        }
+    }
+}
+
+.addup-button-wrapper {
+    margin-top: 1rem;
+    .addup-button {
+        background-color: $brand-primary;
+        font-size: 0.8rem;
+
+        .icon {
+            margin-left: 0.3rem;
+        }
+
+        &:hover {
+            background-color: lighten($brand-primary, 10%);
+        }
+    }
+}

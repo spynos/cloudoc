@@ -1,0 +1,53 @@
+.ServiceDescription {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    .top, .bottom {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .image-wrapper {
+        width: 440px;
+        max-width: 100%;
+        h2 {
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+        p {
+            color: $oc-gray-7;
+        }
+        .image {
+            width: 100%;
+            max-height: 240px;
+            box-shadow: 0 4px 16px -4px $oc-gray-8;
+            border-radius: 4px;
+            transition: all .2s;
+        }
+    }
+
+    .description-container {
+        margin-top: 1rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:hover .imageWrapper .image {
+            transform: translateY(-4px);
+        }
+    }
+    .button-wrapper {
+        padding-top: 4rem;
+        text-align: center;
+        a {
+            margin-top: 1rem;
+            transition: all 0.2s;
+            padding: 0.7rem 1.5rem;
+            &:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 8px -2px $oc-gray-5;
+            }
+        }
+    }
+}

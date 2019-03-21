@@ -1,0 +1,48 @@
+.MainSubSidebar {
+    width: 100%;
+    padding: 2rem 1rem;
+    background-color: $sub-background;
+    display: flex;
+    justify-content: center;
+    .container {
+        .user-avatar {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            img {
+                user-select: none;
+                width: 120px;
+                height: 120px;
+                border-radius: 100%;
+            }
+        }
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            .name {
+                font-size: 1.25rem;
+                font-weight: 700;
+            }
+            .grade {
+                font-size: 0.9rem;
+                color: $brand-secondary;
+            }
+        }
+        .case-add-button {
+            @extend %center;
+            a {
+                all: unset;
+            }
+            button {
+                background-color: $brand-secondary;
+                &:hover {
+                    background-color: lighten($brand-secondary, 10%);
+                }
+                &:active {
+                    background-color: $brand-primary;
+                }
+            }
+        }
+    }
+}

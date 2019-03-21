@@ -1,0 +1,31 @@
+@import './resetCSS';
+// @import url('https://fonts.googleapis.com/css?family=Major+Mono+Display|Nanum+Gothic+Coding:400,700');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 16px;
+    @include media('xl') {
+        font-size: 15px;
+    }
+    @include media('lg') {
+        font-size: 13px;
+    }
+    @include media('md') {
+        font-size: 12px;
+    }
+}
+
+body {
+    position: relative;
+    box-sizing: border-box;
+    #root {
+        position: relative;
+    }
+}

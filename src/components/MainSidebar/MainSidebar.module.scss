@@ -1,0 +1,52 @@
+.MainSidebar {
+    padding: 1rem 0.5rem;
+    background-color: $brand-primary;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    .brand-logo {
+        @extend %center;
+        margin-bottom: 2rem;
+        user-select: none;
+        img {
+            border-radius: 30px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .nav-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .top-buttons-wrapper, 
+    .bottom-buttons-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .nav-button {
+            padding: 10px;
+            color: white;
+            transition: all .2s;
+            border-radius: 4px;
+            @extend %center;
+
+            .icon {
+                padding: 5px;
+                width: 30px;
+                height: 30px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 0.875rem;
+            }
+            &:hover {
+                background-color: $sub-background;
+                color: black;
+            }
+        }
+    }
+}

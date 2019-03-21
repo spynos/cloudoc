@@ -1,0 +1,29 @@
+.Layout {
+    position: relative;
+    min-height: 100vh;
+
+    .header-container {
+        color: $oc-gray-2;
+        position: fixed;
+        height: 4rem;
+        width: 100%;
+        background-color: darken($oc-gray-6, 50%);
+        top: 0;
+        left: 0;
+        z-index: $header-z-index;
+        display: flex;
+        align-items: center;
+    }
+    .main-container {
+        position: relative;
+        min-height: 100vh;
+        padding-top: 4rem;
+        background-image: url('../../../styles//img/static_background.jpg');
+        background-size: cover;
+        
+    }
+
+    .footer-container {
+        background-color: darken($oc-gray-6, 50%);
+    }
+}

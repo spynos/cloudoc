@@ -1,0 +1,67 @@
+.Symptom {
+    .table-container {
+        overflow-x: auto;
+
+        .input-form-table {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            
+            th {
+                padding: 0 0.85rem 0.75rem;
+            }
+        }
+    }
+    
+    .addup-button {
+        .addup-button-wrapper {
+            background-color: $gray-1;
+            user-select: none;
+            text-align: center;
+            letter-spacing: 2px;
+            border-radius: 4px;
+            padding: 0.3rem 0;
+            &:hover {
+                background-color: $gray-2;
+                cursor: pointer;
+            }
+        }
+    }
+    .add-delete-save-button {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        padding: 0 1rem;
+
+        .left {
+            .addup-button {
+                background-color: $brand-primary;
+                .icon {
+                    margin-left: 0.3rem;
+                }
+                &:hover {
+                    background-color: lighten($brand-primary, 10%);
+                }
+            }
+        }
+
+        button {
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            font-size: 0.9rem;
+            &:first-child {
+                margin-right: 0.5rem;
+            }
+            &:last-child {
+                background-color: $brand-tertiary;
+                &:hover {
+                    background-color: darken($brand-tertiary, 10%);
+                }
+                &:active {
+                    background-color: darken($brand-tertiary, 15%);
+                }
+            }
+        }
+    }
+}

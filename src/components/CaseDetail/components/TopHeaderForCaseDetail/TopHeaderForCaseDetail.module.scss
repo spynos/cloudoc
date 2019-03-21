@@ -1,0 +1,63 @@
+.TopHeaderForCaseDetail {
+    width: 100%;
+    height: 5rem;
+    padding: 1rem 4rem;
+    background-color: lighten($brand-secondary, 5%);
+    display: none;
+    z-index: $topbar-z-index;
+    transition: all 1.0s;
+
+    &.isShowingTopbar {
+        display: block;
+        position: sticky;
+        top: 0;
+    }
+    
+    &.isEditing {
+        background-color: darken($oc-red-8, 15%);
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.0rem;
+        .case-number {
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: white;
+        }
+        .edit-save-delete-createPDF-button {
+            user-select: none;
+            display: flex;
+            .button {
+                user-select: none;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.3s;
+                padding: 0.2rem;
+                font-size: 1rem;
+                &:not(:last-child) {
+                    margin-right: 1.5rem;
+                }
+                &:hover {
+                    color: lighten($brand-quaternary, 45%);
+                    cursor: pointer;
+                }
+                .icon {
+                    user-select: none;
+                    color: inherit;
+                    font-size: 1.55em;
+                }
+                .label {
+                    user-select: none;
+                    color: inherit;
+                    font-size: 0.7em;
+                }
+            }
+        }
+    }
+}

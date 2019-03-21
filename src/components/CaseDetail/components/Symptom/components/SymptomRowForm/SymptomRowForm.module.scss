@@ -1,0 +1,75 @@
+.table-row {
+    margin-bottom: 0.5rem;
+    td {
+        padding: 0 0.5rem 0.75rem;
+        &.readOnly {
+            padding: 0 0.5rem 0.75rem;
+            .content {
+                min-width: 5rem;
+                border-radius: 4px;
+                padding-right: 2rem;
+            }
+        }
+    }
+    .content {
+        @include media(lg) {
+            &.rank {
+                select {
+                    width: 3rem;
+                }
+            }
+            &.name {
+                input {
+                    width: 5rem;
+                }
+            }
+            &.onset {
+                input {
+                    width: 5.5rem;
+                }
+            }
+            &.degree {
+                input {
+                    width: 3rem;
+                }
+            }
+            &.unit {
+                input {
+                    width: 2rem;
+                }
+            }
+            &.description {
+                input {
+                    width: 5.5rem;
+                }
+            }
+        }
+        &.rank {
+            min-width: 2.5rem;
+        }
+        &.delete-row-button {
+            padding: 0.5rem 1rem;
+            color: $delete;
+            &:hover {
+                cursor: pointer;
+                background-color: $gray-1;
+                border-radius: 4px;
+            }
+        }
+        .icon {
+            font-size: 1rem;
+            padding: 0;
+            margin: 0;
+        }
+        &.unit {
+            input {
+                width: 4rem;
+            }
+        }
+        input {
+            @extend %input;
+            border-radius: 4px;
+            padding: 0.3rem;
+        }
+    }
+}

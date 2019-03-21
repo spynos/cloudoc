@@ -1,0 +1,53 @@
+.table-row {
+    margin-bottom: 0.5rem;
+    &:first-child {
+        td {
+            padding-top: 0;
+        }
+    }
+    td {
+        padding: 0.3rem 0;
+    }
+    .content {
+        color: $brand-tertiary;
+        padding: 0 0.5rem;
+        &.rank {
+            width: 3rem;
+        }
+        &.disease-name {
+            min-width: 9rem;
+        }
+        &.consistency {
+            width: 4rem;
+        }
+        &.matchedItem {
+            width: 14rem;
+            word-break: break-all;
+        }
+        &.unmatchedItem {
+            width: 14rem;
+            word-break: break-all;
+        }
+        .item {
+            &.high {
+                color: red;
+            }
+            &.low {
+                color: blue;
+            }
+        }
+        @include media(lg) {
+
+        }
+        
+        &.delete-row-button {
+            padding: 0.5rem 1rem;
+            color: $delete;
+            &:hover {
+                cursor: pointer;
+                background-color: $gray-1;
+                border-radius: 4px;
+            }
+        }
+    }
+}

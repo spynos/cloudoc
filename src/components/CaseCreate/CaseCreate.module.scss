@@ -1,0 +1,147 @@
+.CaseCreate {
+    padding: 2rem 4rem;
+    &.loading-container {
+        padding-top: 10rem;
+        text-align: center;
+    }
+    /* 기본 스크롤바를 안 보이게 함 */
+    ::-webkit-scrollbar{
+        -webkit-appearance: none;
+    }
+    /* 양 끝 화살표와 몸통 바를 제외한 길 */
+    ::-webkit-scrollbar-track-piece{
+        background-color: #e7e7e7;
+    }
+    /* 가로 스크롤바의 크기, 세로는 horizontal을 vertical로 바꾸면 된다 */
+    ::-webkit-scrollbar:horizontal{
+        height: 12px;
+        border-radius: 10px;
+    }
+    /* 실제로 움직이는 몸통 바 */
+    ::-webkit-scrollbar-thumb{
+        background-color:#d1d1d1;
+        border-radius: 10px;
+    } 
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.0rem;
+        .case-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .edit-save-delete-createPDF-button {
+            user-select: none;
+            display: flex;
+            .button {
+                user-select: none;
+                color: $brand-secondary;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.3s;
+                padding: 0.2rem;
+                font-size: 1rem;
+                &:not(:last-child) {
+                    margin-right: 0.75rem;
+                }
+                &:hover {
+                    color: lighten($brand-secondary, 15%);
+                    cursor: pointer;
+                }
+                .icon {
+                    user-select: none;
+                    color: inherit;
+                    font-size: 1.25em;
+                }
+                .label {
+                    user-select: none;
+                    color: inherit;
+                    font-size: 0.7em;
+                }
+            }
+        }
+    }
+    .main {
+        .record-button-wrapper {
+            padding: 0.5rem 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: $gray-1;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            
+            .record, .add-button {
+                font-size: 0.7rem;
+                padding: 0.3rem 0.6rem;
+                border-radius: 8px;
+                transition: all 0.2s;
+                &:hover {
+                    background-color: $brand-tertiary;
+                    cursor: pointer;
+                    color: white;
+                }
+
+            }
+            .record {
+                padding-left: 2rem;
+                padding-right: 2rem;
+                border: 1px solid $brand-tertiary;
+                color: inherit;
+                &:hover {
+                    text-decoration: none !important;
+                }
+                &:not(:last-child) {
+                    margin-right: 0.4rem;
+                }
+                &:hover {
+                    border-color: lighten($brand-tertiary, 10%);
+                }
+                &.active {
+                    background-color: $brand-secondary;
+                    border-color: $brand-secondary;
+                    color: white;
+                }
+            }
+            .add-button {
+                margin-right: 0.5rem;
+                border: 1px solid $gray-3;
+                background-color: $gray-3;
+                color: black;
+                &:hover {
+                    background-color: $gray-2;
+                    color: $gray-4;
+                    border-color: $gray-2;
+                }
+            }
+        }
+    }
+    .input-form-container {
+        padding: 1rem;
+        background-color: white;
+
+        .submit-button {
+            margin: 2rem 0;
+            text-align: center;
+            button {
+                font-size: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 2px;
+                background-color: $brand-secondary;
+                padding: 0.5rem 8rem;
+                &:hover {
+                    background-color: darken($brand-secondary, 5%);
+                }
+                &:active {
+                    background-color: darken($brand-secondary, 10%);
+                }
+            }
+        }
+        
+        
+    }
+}

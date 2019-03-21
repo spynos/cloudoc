@@ -1,0 +1,17 @@
+.SearchBar {
+    width: 18rem;
+    .clinicaldb-search-bar {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.4rem 1rem;
+        border: 0;
+        border-radius: 4px;
+        background-color: $gray-1;
+        &:focus {
+            outline: none;
+        }
+        &::placeholder {
+            color: $oc-gray-5;
+        }
+    }
+}

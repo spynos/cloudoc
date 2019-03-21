@@ -1,0 +1,38 @@
+.ClinicalSubSidebar {
+    width: 100%;
+    height: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    .container {
+        padding: 0 1rem;
+        width: 100%;
+        .title {
+            padding-left: 0.5rem;
+            padding-bottom: 0.2rem;
+            color: $brand-primary;
+            font-size: 2.0rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }    
+        .clinicaldb-button {
+            &:not(:first-child) {
+                margin-top: 1rem;
+            }
+            @extend %center;
+            a {
+                all: unset;
+            }
+            button {
+                width: 11rem;
+                padding: 0.5rem 2.5rem;
+                background-color: $brand-secondary;
+                &:hover {
+                    background-color: lighten($brand-secondary, 10%);
+                }
+                &:active {
+                    background-color: $brand-primary;
+                }
+            }
+        }
+    }
+}

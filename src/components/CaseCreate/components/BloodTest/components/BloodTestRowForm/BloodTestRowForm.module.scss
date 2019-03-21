@@ -1,0 +1,74 @@
+.table-row {
+    margin-bottom: 0.5rem;
+    &:first-child {
+        td {
+            padding-top: 0;
+        }
+    }
+    td {
+        padding: 0.5rem 0;
+        .content {
+            min-width: 5rem;
+            border-radius: 4px;
+            &.visualized-data-bar {
+                min-width: 20rem;
+            }
+        }
+    }
+    .content {
+        padding: 0 0.5rem;
+        &.name {
+            width: 12rem;
+            word-break: break-all;
+        }
+        &.state {
+            width: 8rem;
+        }
+        @include media(lg) {
+            &.category {
+                width: 7.5rem;
+                word-break: break-all;
+            }
+            &.name {
+                width: 7.5rem;
+                word-break: break-all;
+            }
+            &.value {
+                input {
+                    width: 2.5rem;
+                }
+                word-break: break-all;
+            }
+            &.unit {
+                width: 5rem;
+                word-break: break-all;
+            }
+            &.state {
+                width: 6rem;
+            }
+        }
+        &.visualized-data-bar {
+            min-width: 20rem;
+        }
+        .icon {
+            font-size: 1rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        input.value {
+            width: 3rem;
+        }
+
+        &.unit {
+            input {
+                width: 4rem;
+            }
+        }
+        input {
+            @extend %input;
+            border-radius: 4px;
+            padding: 0.3rem;
+        }
+    }
+}

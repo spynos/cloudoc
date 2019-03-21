@@ -1,0 +1,208 @@
+.Exam {
+    .exam-container {
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba($gray-3, 0.1);
+        padding: 2rem 1rem;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            .title {
+                font-size: 1.8rem;
+                font-weight: 700;
+
+                .input-container {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;    
+                    input {
+                        @extend %input;
+                        border-radius: 4px;
+                        font-size: 0.9rem;
+                        padding: 0.3rem 0.5rem;
+                        &::placeholder {
+                            font-weight: 300;
+                        }
+                    }
+                    textarea {
+                        width: 100%;
+                        border-radius: 4px;
+                        resize: none;
+                        border: 0;
+                        background-color: $gray-1;
+                        font-size: 0.9rem;
+                        padding: 0.5rem 0.5rem;
+                        &:focus {
+                            outline: 0;
+                        }
+                        &::placeholder {
+                            color: $oc-gray-5;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+            .edit-save-delete-button {
+                display: flex;
+                .button {
+                    color: $brand-secondary;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all 0.3s;
+                    padding: 0.2rem;
+                    font-size: 1rem;
+                    &:not(:last-child) {
+                        margin-right: 1.2rem;
+                    }
+                    &:hover {
+                        color: lighten($brand-secondary, 15%);
+                        cursor: pointer;
+                    }
+                    .icon {
+                        color: inherit;
+                        font-size: 1.25em;
+                    }
+                    .label {
+                        color: inherit;
+                        font-size: 0.7em;
+                    }
+                }
+            }
+        }
+        .top-content {
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            padding: 0 1rem;
+            .content-wrapper {
+                display: flex;
+                margin-bottom: 1rem;
+                
+                .label {
+                    width: 6rem;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    padding: 0.3rem 0;
+                }
+                .input-container {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;  
+                    &.VisualizedDataBar {
+                        display: block;
+                        width: 50%;
+                        padding: 2rem 0;
+                    }  
+                    input {
+                        @extend %input;
+                        border-radius: 4px;
+                        font-size: 0.9rem;
+                        padding: 0.3rem 0.5rem;
+                        &::placeholder {
+                            font-weight: 300;
+                        }
+                        &.input-ref {
+                            width: 3rem;
+                            &:not(:first-child) {
+                                margin-left: 1rem;
+                            }
+                        }
+                    }
+                    textarea {
+                        width: 100%;
+                        border-radius: 4px;
+                        resize: none;
+                        border: 0;
+                        background-color: $gray-1;
+                        font-size: 0.9rem;
+                        padding: 0.5rem 0.5rem;
+                        &:focus {
+                            outline: 0;
+                        }
+                        &::placeholder {
+                            color: $oc-gray-5;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+        .bottom-content-high,
+        .bottom-content-low {
+            padding: 0 1rem;
+            .container-label {
+                margin-bottom: 0.5rem;
+                color: $oc-red-8;
+                font-size: 700;
+            }
+            .input-form-container {
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                display: flex;
+                overflow-x: auto;
+                
+                .form-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    
+                    &:not(:last-child) {
+                        margin-right: 1.2rem;
+                    }
+                    &.related-disease {
+                        flex: 1;
+                    }
+                    &.relevance,
+                    &.reference {
+                        flex: 2;
+                    }
+                    &.delete-row-button {
+                        padding: 0.3rem 0;
+                        color: $delete;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+        
+                    .label {
+                        margin-bottom: 0.3rem;
+                    }
+        
+                    .content {
+                        height: 2rem;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 0.3rem;
+                        .icon {
+                            margin-left: 0.3rem;
+                            font-size: 1rem;
+                        }
+                        input {
+                            width: 100%;
+                            @extend %input;
+                            border-radius: 4px;
+                            padding: 0.3rem;
+                        }
+                    }
+                }
+            }
+            .addup-button-wrapper {
+                .addup-button {
+                    background-color: $brand-primary;
+                    font-size: 0.8rem;
+                    .icon {
+                        margin-left: 0.3rem;
+                    }
+                    &:hover {
+                        background-color: lighten($brand-primary, 10%);
+                    }
+                }
+            }
+        }
+        .bottom-content-high {
+            margin-bottom: 3rem;
+        }
+    }   
+}
